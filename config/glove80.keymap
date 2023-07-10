@@ -134,7 +134,7 @@
  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT   &none                                                                  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none   &none
        &trans         &none       &none       &none   &none   &none                                                   &none       &none         &none         &none   &none   &none
        &trans         &none       &none       &none   &none   &none                                                   &none       &none         &none         &none   &none   &none
-       &trans        &bhm LALT N1   &bhm LGUI N2 &bhm LCTRL N3  &bhm LSHIFT N4  &kp N5                              &kp N6  &bhm RSHIFT N7   &bhm RCTRL N8   &bhm RGUI N9  &RALT N0   &none
+       &trans        &bhm LALT N1   &bhm LGUI N2 &bhm LCTRL N3  &bhm LSHIFT N4  &kp N5                              &kp N6  &bhm RSHIFT N7   &bhm RCTRL N8   &bhm RGUI N9  &bhm RALT N0   &none
        &trans         &none       &none       &none   &none   &none  &trans  &trans  &trans  &trans  &trans  &trans   &none       &none         &none         &none   &none   &none
    &magic 2 0         &none       &none       &none   &none          &trans   &to 0  &trans  &trans   &to 3  &trans               &none         &none         &none   &none   &none
             >;
