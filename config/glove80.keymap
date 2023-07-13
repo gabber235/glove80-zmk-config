@@ -113,11 +113,11 @@
 };
 
 
-#DEFINE BASE 0
-#DEFINE CHARACTERS 1
-#DEFINE MAGIC 2
-#DEFINE FUNCTIONS 3
-#DEFINE GAME 4
+#define BASE 0
+#define CHARACTERS 1
+#define MAGIC 2
+#define FUNCTIONS 3
+#define GAME 4
 
     /* Automatically generated keymap */
 / {
