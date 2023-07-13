@@ -112,6 +112,13 @@
     
 };
 
+
+#DEFINE BASE 0
+#DEFINE CHARACTERS 1
+#DEFINE MAGIC 2
+#DEFINE FUNCTIONS 3
+#DEFINE GAME 4
+
     /* Automatically generated keymap */
 / {
     keymap {
@@ -123,9 +130,9 @@
      &kp F1     &kp F2      &kp F3      &kp F4          &kp F5                                                                                  &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
   &kp EQUAL     &kp N1      &kp N2      &kp N3          &kp N4          &kp N5                                                                  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
     &kp TAB     &kp Q       &kp W       &kp E           &kp R           &kp T                                                                   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
-    &kp ESC     &bhm LALT A &bhm LGUI S &bhm LCTRL D    &bhm LSHIFT F   &kp G                                                                   &kp H   &bhm RSHIFT J   &bhm RCTRL K &bhm RGUI L  &bhm RALT SEMI    &kp SQT
-  &kp GRAVE     &kp Z       &kp X       &kp C           &kp V           &kp B   &kp LSHFT   &kp LCTRL   &to 4      &kp LGUI    &kp RCTRL   &kp RSHFT   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp PG_UP
- &magic 2 0     &kp HOME    &kp END     &kp LEFT        &kp RIGHT               &kp SPACE   &lower      &to 3    &kp RALT    &kp BSPC    &kp RET          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+    &kp ESC     &bhm LALT A &bhm LCTRL S &bhm LGUI D    &bhm LSHIFT F   &kp G                                                                   &kp H   &bhm RSHIFT J   &bhm RGUI K &bhm RCTRL L  &bhm RALT SEMI    &kp SQT
+  &kp GRAVE     &kp Z       &kp X       &kp C           &kp V           &kp B   &kp LSHFT   &kp LCTRL   &to GAME      &kp LGUI    &kp RCTRL   &kp RSHFT   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp PG_UP
+ &magic 2 0     &kp HOME    &kp END     &kp LEFT        &kp RIGHT               &kp SPACE   &lower      &mo FUNCTIONS    &kp RALT    &kp BSPC    &kp RET          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
             >;
         };
 
@@ -134,9 +141,9 @@
  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT   &none                                                                     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none   &none
        &trans         &none       &none       &none   &none   &none                                                      &none       &none         &none         &none   &none   &none
        &trans         &none   &kp TILDE   &kp GRAVE  &kp EQUAL  &kp UNDER                                                   &kp PLUS   &kp MINUS      &kp LBKT      &kp RBKT     &none   &none
-       &trans   &bhm LALT N1    &bhm LGUI N2   &bhm LSHIFT N3  &bhm LSHIFT N4  &kp N5                                  &kp N6      &bhm RSHIFT N7  &bhm RCTRL N8   &bhm RGUI N9  &bhm RALT N0   &none
-       &trans      &kp EXCL      &kp AT    &kp HASH   &kp DLLR  &kp PRCNT  &trans  &trans  &trans  &trans  &trans  &trans  &kp CARET    &kt AMPS      &kp STAR      &kp LPAR  &kp RPAR   &none
-   &magic 2 0         &none       &none       &none   &none          &trans   &to 0  &trans  &trans   &trans  &trans                  &none         &none         &none   &none   &none
+       &trans   &bhm LALT N1    &bhm LCTRL N2   &bhm LGUI N3  &bhm LSHIFT N4  &kp N5                                  &kp N6      &bhm RSHIFT N7  &bhm RGUI N8   &bhm RCTRL N9  &bhm RALT N0   &none
+       &trans      &kp EXCL      &kp AT    &kp HASH   &kp DLLR  &kp PRCNT  &trans  &trans  &trans  &trans  &trans  &trans  &kp CARET    &kp AMPS      &kp STAR      &kp LPAR  &kp RPAR   &none
+   &magic 2 0         &none       &none       &none   &none          &trans   &to BASE  &trans  &trans   &trans  &trans                  &none         &none         &none   &none   &none
             >;
         };
 
@@ -156,10 +163,10 @@
             bindings = <
  &trans    &trans    &trans     &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
  &trans    &trans    &trans     &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
+ &trans    &trans    &trans     &trans     &trans  &trans                                                    &trans    &trans  &kp LBRC     &kp RBRC  &trans  &trans
  &trans    &trans    &trans     &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &kp LALT  &kp LGUI  &kp LCTRL  &kp LSHIFT  &trans                                                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans    &trans    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans
- &trans    &trans    &trans     &trans     &trans          &trans   &to 0  &trans &trans   &trans  &trans              &trans  &trans     &trans  &trans  &trans
+ &trans    &trans    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &kp LPAR     &kp RPAR  &trans  &trans
+ &trans    &trans    &trans     &trans     &trans          &trans   &to BASE  &trans &trans   &trans  &trans              &trans  &trans     &trans  &trans  &trans
             >;
         };
 
@@ -169,8 +176,8 @@
  &trans     &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
  &trans     &trans  &trans   &kp W  &kp E  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &kp LSHIFT   &kp A   &kp S   &kp D  &kp F                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &kp LCTRL &trans  &trans  &trans  &trans  &trans  &trans   &to 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &trans  &trans  &trans  &trans          &trans   &to 0  &to 3  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans     &kp LCTRL &trans  &trans  &trans  &trans  &trans  &trans   &to BASE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans     &trans  &trans  &trans  &trans          &trans   &to BASE  &none  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
