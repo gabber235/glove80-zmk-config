@@ -62,7 +62,7 @@
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <0>
             bindings
                 = <&rgb_ug RGB_STATUS>;
         };
@@ -105,13 +105,21 @@
 
         fn: function_macro {
             label = "FN";
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>; // Must be 1
+            /*
+            * compatible = "zmk,behavior-macro-one-param";
+            * #binding-cells = <1>; // Must be 1
+            */
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
-                = <&macro_press &kp CAPS>
-                , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp CAPS>
-                ;
+                = <&kp J>;
+            /*
+            * bindings
+            *     = <&macro_press &kp CAPS>
+            *     , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
+            *     , <&macro_release &kp CAPS>
+            *     ;
+            */
         };
     };
 };
