@@ -103,23 +103,15 @@
                   <&bt BT_SEL 3>;
         };
 
-        fn: function_macro {
-            label = "FN";
-            /*
-            * compatible = "zmk,behavior-macro-one-param";
-            * #binding-cells = <1>; // Must be 1
-            */
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp J>;
-            /*
-            * bindings
-            *     = <&macro_press &kp CAPS>
-            *     , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
-            *     , <&macro_release &kp CAPS>
-            *     ;
-            */
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
         };
     };
 };
