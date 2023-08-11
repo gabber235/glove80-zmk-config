@@ -103,14 +103,14 @@
                   <&bt BT_SEL 3>;
         };
 
-        fn_1: function_macro {
+        fn: function_macro {
             label = "FN";
             compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+            #binding-cells = <1>; // Must be 1
             bindings
                 = <&macro_press &kp CAPS>
                 , <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp CAPS>;
+                , <&macro_release &kp CAPS>
                 ;
         };
     };
