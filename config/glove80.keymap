@@ -107,7 +107,10 @@
             label = "FN";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>; // Must be 1
-            bindings = <&kp F1>;
+            bindings 
+                = <&macro_param_1to1>
+                , <&macro_tap &kp Z>
+                ;
         };
     };
 };
