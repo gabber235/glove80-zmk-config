@@ -103,7 +103,7 @@
                   <&bt BT_SEL 3>;
         };
 
-        fn: function_macro {
+        fn_1: function_macro {
             label = "FN";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
