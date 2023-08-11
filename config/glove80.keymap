@@ -102,6 +102,17 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 3>;
         };
+
+        fn: function_macro {
+            label = "FN";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &kp CAPS>
+                , <&macro_param_1to1>, <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp CAPS>;
+                ;
+        };
     };
 };
 
@@ -173,7 +184,7 @@
  &none    &none    &none     &none     &none                                                                      &none  &none     &none  &none  &none
  &none    &none    &none     &none     &none  &none                                                    &none    &none  &none     &none  &none  &none
  &none    &kp F13  &kp F14   &kp F15   &kp F16 &kp F17                                                  &none    &none  &none     &none  &none  &none
- &none    &kp LALT  &kp LCTRL &kp LGUI &kp LSHIFT  &none                                                &none    &kp F20  &kp F22 &kp F23  &kp F24  &none
+ &none    &kp LALT  &kp LCTRL &kp LGUI &kp LSHIFT  &none                                                &none    &fn J  &kp F22 &kp F23  &kp F24  &none
  &none    &none    &none     &none     &none  &none  &none  &none  &to BASE  &none  &none  &none        &none    &none  &none     &none  &none  &none
  &none    &none    &none     &none     &none          &none   &none  &none &none   &none  &none                 &none  &none     &none  &none  &none
             >;
