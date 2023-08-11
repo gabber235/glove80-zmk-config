@@ -109,6 +109,7 @@
             #binding-cells = <1>; // Must be 1
             bindings 
                 = <&macro_tap &kp Z>
+                , <&macro_tap &kp Z>
                 ;
         };
     };
