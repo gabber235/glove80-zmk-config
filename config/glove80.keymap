@@ -136,7 +136,7 @@
         compatible = "zmk,keymap";
 
 
-        layer_Base {
+        base_layer {
             bindings = <
      &kp F1     &kp F2      &kp F3      &kp F4          &kp F5                                                                                  &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
   &kp EQUAL     &kp N1      &kp N2      &kp N3          &kp N4          &kp N5                                                                  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
@@ -147,7 +147,7 @@
             >;
         };
 
-                layer_Characters {
+                characters_layer {
             bindings = <
  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PREV  &kp C_NEXT   &none                                                                     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP   &none   &none
        &trans         &none       &none       &none   &none   &none                                                      &none       &none         &none         &none   &none   &none
@@ -159,7 +159,7 @@
         };
 
 
-        layer_Magic {
+        magic_layer {
             bindings = <
             &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
             &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
@@ -170,7 +170,7 @@
             >;
         };
 
-        layer_Functions {
+        functions_layer {
             bindings = <
  &none    &none    &none     &none     &none                                                                      &none  &none     &none  &none  &none
  &none    &none    &none     &none     &none  &none                                                    &none    &none  &none     &none  &none  &none
@@ -181,7 +181,7 @@
             >;
         };
 
-        layer_Game {
+        game_layer {
             bindings = <
  &trans     &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
  &trans     &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
